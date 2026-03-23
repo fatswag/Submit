@@ -9,6 +9,3 @@ services:
       - .env
     ports:
       - "${SUBMIT_CONTAINER_PORT}:${SUBMIT_PORT}"
-    depends_on:
-      mysql:
-        condition: service_healthy
