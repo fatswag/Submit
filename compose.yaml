@@ -1,11 +1,25 @@
 services:
-  
   submit-app:
     build:
-      context: ./submit-app
+      context: .
     container_name: submit-app
     restart: always
     env_file:
       - .env
     ports:
       - "${SUBMIT_CONTAINER_PORT}:${SUBMIT_PORT}"
+    depends_on:
+      - rabbitmq
+    volumes:
+      - types_cache:/usr/src/app/cache
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "${RABBITMQ_CONTAINER_PORT}:${RABBITMQ_PORT}"
+      - "${RABBITMQ_MANAGEMENT_CONTAINER_PORT}:15672"
+
+volumes:
+  types_cache:
