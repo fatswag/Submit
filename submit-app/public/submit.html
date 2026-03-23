@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="./submit.js" defer></script>
+  <title>Submit a Joke</title>
+</head>
+<body>
+  <h1 class="title">Submit a Joke</h1>
+
+  <form id="submitForm" class="jokeInput">
+    <label for="typeSelect">Choose an existing type</label>
+    <select id="typeSelect">
+      <option value="">-- Select a type --</option>
+    </select>
+
+    <label for="newType">Or enter a new type</label>
+    <input type="text" id="newType" name="newType" placeholder="e.g. dad joke">
+
+    <label for="setup">Setup</label>
+    <input type="text" id="setup" name="setup" required>
+
+    <label for="punchline">Punchline</label>
+    <input type="text" id="punchline" name="punchline" required>
+
+    <button type="submit" class="jokeButton">Submit Joke</button>
+  </form>
+
+  <div id="result"></div>
+</body>
+</html>

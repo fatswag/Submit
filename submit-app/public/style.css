@@ -1,0 +1,89 @@
+body{
+    background-color: black;
+    text-align: center;
+}
+
+.title{
+    color:darksalmon;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+.jokeInput {
+    display: flex;
+    flex-direction: column; /* stack elements vertically */
+    align-items: center;    /* center horizontally */
+    gap: 15px;              /* spacing between each label-input pair */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: antiquewhite;
+}
+.jokeInput label, .jokeInput select, .jokeInput input {
+    font-size: 1rem;
+}
+
+.jokeInput select, .jokeInput input {
+    padding: 5px 10px;
+    width: 200px;
+    font-size: 1rem;
+}
+
+.jokeButton{
+    background-color:brown;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: antiquewhite;
+    margin-bottom: 20px;
+    padding: 8px;
+}
+
+
+#jokeTable {
+  margin: 20px auto;
+  border-collapse: collapse;
+  color: antiquewhite;
+  width: 90%;
+  
+}
+
+#jokeTable th {
+  background-color: brown;
+  color: antiquewhite;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#jokeTable td {
+  border: 1px solid antiquewhite;
+  padding: 10px;
+  text-align: center;
+}
+
+#jokeTable tr:nth-child(even) {
+  background-color:#444;
+}
+
+#jokeTable tr:nth-child(odd) {
+  background-color:#333;
+}
+
+#jokeTable td.setup{
+color:lightcoral;
+  font-weight: bold;
+}
+
+#jokeTable td.punchline{
+   color: lightskyblue;
+  font-style: italic;
+}
+
+p.setup {
+  color: lightcoral;
+  font-weight: bold;
+}
+
+p.punchline {
+  color: lightskyblue;
+  font-style: italic;
+}
+
